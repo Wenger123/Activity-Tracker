@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>View All Tasks</title>
+  <!-- Include Bootstrap CSS from a CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add your custom CSS or other resources here -->
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-5 mb-4">View All Tasks</h1>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+        <th>Created Date</th>
+        <th>Updated Date</th>
+        <th>Done Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Use Thymeleaf or your preferred templating engine to loop through tasks -->
+    <tr th:each="task : ${tasks}">
+      <td th:text="${task.id}"></td>
+      <td th:text="${task.name}"></td>
+      <td th:text="${task.description}"></td>
+      <td th:text="${task.status}"></td>
+        <td th:text="${task.createdDate}"></td>
+        <td th:text="${task.doneDate}"></td>
+        <td th:text="${task.upDateDate}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <a class="btn btn-primary" href="/user_page">Go back to User Page</a>
+</div>
+</body>
+</html>
+

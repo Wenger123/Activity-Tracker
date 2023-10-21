@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Update</title>
+    <!-- Include Bootstrap CSS from a CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">User Update Page</h1>
+    <form class="mt-4" method="post" th:action="@{/userUpdate}">
+        <input type="hidden" name="email" th:value="${email}">
+        <div class="form-group">
+            <label for="newFirstName">New First Name:</label>
+            <input type="text" class="form-control" id="newFirstName" name="newFirstName" placeholder="Your new First Name">
+        </div>
+        <div class="form-group">
+            <label for="newLastName">New Last Name:</label>
+            <input type="text" class="form-control" id="newLastName" name="newLastName" placeholder="Your new Last Name">
+        </div>
+        <div class="form-group">
+            <label for="newPhoneNumber">New Phone Number:</label>
+            <input type="text" class="form-control" id="newPhoneNumber" name="newPhoneNumber" placeholder="Your new Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="newPassword">New Password:</label>
+            <input type="text" class="form-control" id="newPassword" name="newPassword" placeholder="Your new Password">
+        </div>
+        <!-- Add more fields as needed -->
+        <button type="submit" class="btn btn-primary" onclick="myfunction()">Update</button>
+    </form>
+    <a th:href="@{/user_page}" class="btn btn-secondary mt-3">Go back to User Page</a>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    const myfunction = () => {
+        alert("Updated Successfully");
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Details</title>
+  <!-- Include Bootstrap CSS from a CDN or your local resources -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Task Details</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Created Date</th>
+      <th>Updated Date</th>
+      <th>Done Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td th:text="${activity.id}"></td>
+      <td th:text="${activity.name}"></td>
+      <td th:text="${activity.description}"></td>
+      <td th:text="${activity.status}"></td>
+      <td th:text="${activity.createdDate}"></td>
+      <td th:text="${activity.doneDate}"></td>
+      <td th:text="${activity.upDateDate}"></td>
+
+    </tr>
+    </tbody>
+  </table>
+  <a href="/user_page" class="btn btn-primary mt-3">Go back to User Page</a>
+</div>
+</body>
+</html>
+

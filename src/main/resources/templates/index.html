@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Activity Tracker</title>
+    <link rel="stylesheet" th:href="@{/static/css/styles.css}" /> <!-- Adjust the path to your CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+</head>
+<body>
+<header class="bg-primary text-white text-center py-5">
+    <h1 class="display-4">Welcome to Activity Tracker</h1>
+    <p class="lead">Track your activities efficiently with our app.</p>
+    <a th:href="@{/login_page}" class="btn btn-light btn-lg">Login</a>
+    <a th:href="@{/register}" class="btn btn-light btn-lg ml-2">Sign Up</a>
+</header>
+
+<section class="container my-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Why Choose Activity Tracker?</h2>
+            <p>
+                Activity Tracker stands out as the top-notch tool for effortlessly organizing, overseeing, and optimizing your daily routines and tasks.
+                Whether you're meticulously planning your agenda, monitoring your achievements, or fostering effective teamwork, we've got your back.
+              <p>
+            Our feature-rich platform empowers you to take charge of your schedule and goals, enhancing your productivity and enabling you to stay on top
+            of your game with ease. Say goodbye to the chaos and welcome streamlined activity management into your life. With Activity Tracker, you're set to accomplish more,
+            stress less, and embrace a more organized, efficient lifestyle.
+
+        </p>
+        </div>
+        <div class="col-lg-6">
+            <img src="/img.png" alt="Your Image" />
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+    &copy; 2023 Activity Tracker by Ezeanya Francis
+</footer>
+</body>
+</html>
